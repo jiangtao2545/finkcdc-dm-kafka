@@ -1,0 +1,12 @@
+META-INF/spring-configuration-metadata.json
+com/example/flinkcdcdm/config/FlinkCdcProperties.class
+com/example/flinkcdcdm/config/FlinkCdcProperties$KafkaProperties.class
+com/example/flinkcdcdm/config/FlinkCdcProperties$DmProperties.class
+com/example/flinkcdcdm/config/FlinkCdcProperties$FlinkProperties.class
+com/example/flinkcdcdm/serializer/CanalMessageKafkaSerializationSchema.class
+com/example/flinkcdcdm/job/DmCdcToKafkaJob.class
+com/example/flinkcdcdm/deserialization/CanalDebeziumDeserializationSchema.class
+com/example/flinkcdcdm/serializer/CanalJsonSerializer.class
+com/example/flinkcdcdm/serializer/CanalJsonSerializer$1.class
+com/example/flinkcdcdm/model/CanalMessage.class
+com/example/flinkcdcdm/FlinkCdcDmKafkaApplication.class

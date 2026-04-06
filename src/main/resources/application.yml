@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: finkcdc-dm-kafka
+
+flink-cdc:
+  dm:
+    host: 192.168.1.100
+    port: 5236
+    username: SYSDBA
+    password: SYSDBA001
+    server-name: dm_server_01
+    schema-name: TESTDB
+    table-list:
+      - TESTDB.ORDERS
+      - TESTDB.CUSTOMERS
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic: dm_cdc_events
+    # at-least-once 或 exactly-once
+    semantic: at-least-once
+
+  flink:
+    parallelism: 1
+    checkpoint-dir: file:///tmp/flink-checkpoints/dm-cdc
+    checkpoint-interval-ms: 30000
+    state-backend: filesystem
+
+logging:
+  level:
+    com.example.flinkcdcdm: INFO
+    io.debezium: WARN
+    org.apache.flink: WARN
