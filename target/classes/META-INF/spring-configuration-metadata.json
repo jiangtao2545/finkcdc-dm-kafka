@@ -1,0 +1,118 @@
+{
+  "groups": [
+    {
+      "name": "flink-cdc",
+      "type": "com.example.flinkcdcdm.config.FlinkCdcProperties",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties"
+    },
+    {
+      "name": "flink-cdc.dm",
+      "type": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties",
+      "sourceMethod": "getDm()"
+    },
+    {
+      "name": "flink-cdc.flink",
+      "type": "com.example.flinkcdcdm.config.FlinkCdcProperties$FlinkProperties",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties",
+      "sourceMethod": "getFlink()"
+    },
+    {
+      "name": "flink-cdc.kafka",
+      "type": "com.example.flinkcdcdm.config.FlinkCdcProperties$KafkaProperties",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties",
+      "sourceMethod": "getKafka()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "flink-cdc.dm.host",
+      "type": "java.lang.String",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "defaultValue": "localhost"
+    },
+    {
+      "name": "flink-cdc.dm.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "defaultValue": "SYSDBA001"
+    },
+    {
+      "name": "flink-cdc.dm.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "defaultValue": 5236
+    },
+    {
+      "name": "flink-cdc.dm.schema-name",
+      "type": "java.lang.String",
+      "description": "要监听的 schema（database）",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "defaultValue": "TESTDB"
+    },
+    {
+      "name": "flink-cdc.dm.server-name",
+      "type": "java.lang.String",
+      "description": "Debezium logical server name，需在同一环境中唯一",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "defaultValue": "dm_server"
+    },
+    {
+      "name": "flink-cdc.dm.table-list",
+      "type": "java.util.List<java.lang.String>",
+      "description": "监听的表列表，格式: schema.table，支持正则",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties"
+    },
+    {
+      "name": "flink-cdc.dm.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$DmProperties",
+      "defaultValue": "SYSDBA"
+    },
+    {
+      "name": "flink-cdc.flink.checkpoint-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$FlinkProperties",
+      "defaultValue": "file:\/\/\/tmp\/flink-checkpoints"
+    },
+    {
+      "name": "flink-cdc.flink.checkpoint-interval-ms",
+      "type": "java.lang.Long",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$FlinkProperties",
+      "defaultValue": 60000
+    },
+    {
+      "name": "flink-cdc.flink.parallelism",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$FlinkProperties",
+      "defaultValue": 1
+    },
+    {
+      "name": "flink-cdc.flink.state-backend",
+      "type": "java.lang.String",
+      "description": "rocksdb 或 filesystem",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$FlinkProperties",
+      "defaultValue": "filesystem"
+    },
+    {
+      "name": "flink-cdc.kafka.bootstrap-servers",
+      "type": "java.lang.String",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$KafkaProperties",
+      "defaultValue": "localhost:9092"
+    },
+    {
+      "name": "flink-cdc.kafka.semantic",
+      "type": "java.lang.String",
+      "description": "exactly-once 或 at-least-once",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$KafkaProperties",
+      "defaultValue": "at-least-once"
+    },
+    {
+      "name": "flink-cdc.kafka.topic",
+      "type": "java.lang.String",
+      "sourceType": "com.example.flinkcdcdm.config.FlinkCdcProperties$KafkaProperties",
+      "defaultValue": "dm_cdc_events"
+    }
+  ],
+  "hints": []
+}

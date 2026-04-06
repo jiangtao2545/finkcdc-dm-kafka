@@ -1,0 +1,7 @@
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/config/FlinkCdcProperties.java
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/serializer/CanalMessageKafkaSerializationSchema.java
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/deserialization/CanalDebeziumDeserializationSchema.java
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/model/CanalMessage.java
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/serializer/CanalJsonSerializer.java
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/job/DmCdcToKafkaJob.java
+/home/runner/work/finkcdc-dm-kafka/finkcdc-dm-kafka/src/main/java/com/example/flinkcdcdm/FlinkCdcDmKafkaApplication.java
