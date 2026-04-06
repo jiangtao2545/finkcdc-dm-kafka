@@ -102,7 +102,7 @@ public class DmCdcToKafkaJob {
 
         // 历史存储（DM Connector 可能需要）
         debeziumProps.setProperty("database.history",
-                "io.debezium.relying.history.FileDatabaseHistory");
+                "io.debezium.relational.history.FileDatabaseHistory");
         debeziumProps.setProperty("database.history.file.filename",
                 "/tmp/dm_cdc_history.dat");
 
